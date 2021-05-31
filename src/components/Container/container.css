@@ -1,0 +1,25 @@
+.malls__title {
+  color: rgb(252, 57, 57);
+}
+
+.malls__lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 100px;
+  column-gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.malls__viewall {
+  color: rgb(53, 53, 221);
+  text-align: end;
+  cursor: pointer;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

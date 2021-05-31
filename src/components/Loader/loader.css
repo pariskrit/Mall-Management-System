@@ -1,0 +1,25 @@
+.loader {
+  position: relative;
+  height: 30px;
+  background-color: black;
+  border-radius: 2px;
+  text-align: center;
+  font-size: large;
+  padding-top: 5px;
+  margin: 20px 0;
+  z-index: -2;
+}
+
+.loader__bar {
+  position: absolute;
+  top: 0;
+
+  height: 35px;
+  background-color: gray;
+  z-index: -1;
+}
+
+.loader > p {
+  z-index: 2;
+  color: white;
+}
