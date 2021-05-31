@@ -12,7 +12,7 @@ function ShopsListpage() {
     const selectedMall = docs.find((mall) => mall.id === mallid);
 
     setSelectedMall(selectedMall);
-  }, [docs]);
+  }, [docs, mallid]);
 
   return (
     <>

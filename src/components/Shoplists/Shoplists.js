@@ -22,7 +22,7 @@ function Shoplists({ isAdmin, selectedMall }) {
 
   useEffect(() => {
     setAllData(selectedMall?.shops);
-  }, [selectedMall]);
+  }, [selectedMall, setAllData]);
 
   useEffect(() => {
     if (filteredData?.length > 0) {

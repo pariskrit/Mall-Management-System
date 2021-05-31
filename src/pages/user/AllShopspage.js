@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import useFirestore from "../../firebase/useFirestore";
 import Container from "../../components/Container/Container";
 import Block from "../../components/Block/Block";
@@ -14,7 +14,7 @@ function AllShopspage() {
 
   useEffect(() => {
     setAllData(docs.map((mall) => [...mall.shops]).flat());
-  }, [docs]);
+  }, [docs, setAllData]);
 
   return (
     <>

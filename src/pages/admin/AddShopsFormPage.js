@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Shopform from "../../components/Form/AddShopform";
 import { Context } from "../../context/ContextProvider";
 import useFirestore from "../../firebase/useFirestore";
@@ -19,10 +19,10 @@ function AddShopsFormPage() {
   const handleAddMoreShop = () => {
     dispatch({ type: "Add_ShopFields" });
   };
-
+  console.log(state);
   useEffect(() => {
     dispatch({ type: "Save_AllData", payload: docs });
-  }, [docs]);
+  }, [docs, dispatch]);
 
   return (
     <>

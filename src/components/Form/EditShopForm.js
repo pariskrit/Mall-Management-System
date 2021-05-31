@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button, TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { useParams } from "react-router";
 import Loader from "../Loader/Loader";
 import { getImageUrl } from "../../utils/getImageUrl";
@@ -9,7 +9,6 @@ import {
 } from "../../utils/firebaseCrud";
 import Success from "../Success/Success";
 import { Context } from "../../context/ContextProvider";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import { useForm } from "react-hook-form";
 import Shopform from "./AddShopform";
 
@@ -84,7 +83,7 @@ function EditShopForm({ allDatas }) {
     dispatch({ type: "Save_Shops", payload: [shopEdit] });
 
     return () => dispatch({ type: "Reset_ShopDetails" });
-  }, [allDatas]);
+  }, [allDatas, dispatch, mallid, shopid]);
 
   useEffect(() => {
     reset({
@@ -94,7 +93,7 @@ function EditShopForm({ allDatas }) {
         shopImages: "something",
       })),
     });
-  }, [shopDetails]);
+  }, [shopDetails, reset]);
 
   return (
     <div>

@@ -12,9 +12,7 @@ const useStorage = (file) => {
     const collectionRef = projectFirestore.collection("Malls");
     storageRef.put(image).on(
       "state_changed",
-      (snap) => {
-        let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
-      },
+      (snap) => {},
       (err) => {
         setError(err);
       },
@@ -24,7 +22,7 @@ const useStorage = (file) => {
         setUrl(url);
       }
     );
-  }, [file]);
+  }, [file, address, imageName, image, title]);
   return { error, url };
 };
 

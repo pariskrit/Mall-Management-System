@@ -90,7 +90,7 @@ function EditMallForm({ mallid }) {
         description: shop.description,
       })),
     });
-  }, [mallDetails, reset]);
+  }, [mallDetails, reset, shopDetails]);
 
   return (
     <div className="addform">

@@ -13,7 +13,7 @@ function MallsLists({ isAdmin = false }) {
 
   useEffect(() => {
     setAllData(docs);
-  }, [docs]);
+  }, [docs, setAllData]);
 
   return (
     <div>

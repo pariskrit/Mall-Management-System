@@ -14,7 +14,7 @@ function AllShopspage() {
 
   useEffect(() => {
     setAllData(docs.map((mall) => [...mall.shops]).flat());
-  }, [docs]);
+  }, [docs, setAllData]);
 
   return (
     <>

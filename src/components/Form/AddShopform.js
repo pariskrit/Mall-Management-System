@@ -59,7 +59,7 @@ function Shopform({
       dispatch({ type: "Reset_ShopDetails" });
       dispatch({ type: "Reset_MallDetails" });
     };
-  }, []);
+  }, [dispatch]);
 
   return (
     <form

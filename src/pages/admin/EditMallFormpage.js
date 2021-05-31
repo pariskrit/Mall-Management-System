@@ -8,14 +8,14 @@ function EditMallFormpage() {
   const { docs } = useFirestore("Malls");
   const [state, dispatch] = useContext(Context);
   const { mallid } = useParams();
-
+  console.log(state);
   useEffect(() => {
     if (docs.length > 0) {
       const selectedMall = docs.find((mall) => mall.id === mallid);
       dispatch({ type: "Save_Mall", payload: selectedMall });
       dispatch({ type: "Save_Shops", payload: selectedMall?.shops });
     }
-  }, [docs]);
+  }, [docs, dispatch, mallid]);
 
   return (
     <>

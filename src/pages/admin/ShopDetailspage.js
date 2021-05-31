@@ -15,7 +15,7 @@ function Shoppage({ location }) {
       const selectedMall = docs.find((mall) => mall?.id === mallid);
       setShops(selectedMall?.shops?.find((shop) => shop?.id === shopid));
     }
-  }, [docs]);
+  }, [docs, mallid, shopid, shops?.length]);
 
   return (
     <>

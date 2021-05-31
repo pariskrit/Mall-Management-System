@@ -21,7 +21,6 @@ import AdminAllShopspage from "./pages/admin/AllShopspage";
 import EditMallFormpage from "./pages/admin/EditMallFormpage";
 import Login from "./components/Form/Login";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function App() {
   return (
